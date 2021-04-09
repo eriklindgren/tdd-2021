@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Counter from '../components/Counter.js'
+import Xkcd from '../components/Xkcd.js'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -50,6 +51,7 @@ export default function Home() {
           </a>
         </div>
         <Counter />
+        <Xkcd />
       </main>
 
       <footer className={styles.footer}>
