@@ -1,9 +1,10 @@
-import { render, screen } from "@testing-library/react"
+import { render, screen, waitFor } from "@testing-library/react"
 import Xkcd from "../components/Xkcd"
 
 describe("Xkcd", () => {
   it("renders expected image", async () => {
     render(<Xkcd />)
-    expect(await screen.findByRole("img")).toHaveAttribute("src", "https://imgs.xkcd.com/comics/hammer_incident.png")
+    const img = await waitFor(() => screen.getByRole('img'))
+    expect(img).toHaveAttribute("src", "test-src")
   })
 })
